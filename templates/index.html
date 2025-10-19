@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartPitch – AI Outreach Generator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+  <div class="container">
+    <h1>💬 SmartPitch – AI Outreach Generator</h1>
+    <p class="subtitle">Cold DMs. Instantly. No API Needed.</p>
+
+    <form method="POST">
+      <label>Client Name</label>
+      <input type="text" name="client_name" placeholder="e.g. Sarah" required>
+
+      <label>Client Type / Business</label>
+      <input type="text" name="client_type" placeholder="e.g. SaaS startup founder" required>
+
+      <label>Your Service</label>
+      <input type="text" name="service" placeholder="e.g. Python automation scripts" required>
+
+      <label>Platform</label>
+      <select name="platform" required>
+        <option value="linkedin">LinkedIn</option>
+        <option value="upwork">Upwork</option>
+        <option value="email">Email</option>
+        <option value="instagram">Instagram</option>
+      </select>
+
+      <label>Tone</label>
+      <select name="tone">
+        <option value="friendly">Friendly</option>
+        <option value="professional">Professional</option>
+        <option value="confident">Confident</option>
+      </select>
+
+      <button type="submit">Generate Message 🔮</button>
+    </form>
+
+    {% if message %}
+      <div class="output">
+        <h3>✨ Your Generated Message:</h3>
+        <pre>{{ message }}</pre>
+      </div>
+    {% endif %}
+
+    <footer>
+      Built with 💛 by <strong>Eva & Rohan Digital Systems</strong>
+    </footer>
+  </div>
+</body>
+</html>
