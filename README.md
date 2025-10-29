@@ -47,7 +47,7 @@ http://localhost:5000
 
 📸 Preview
 
-<img src=""D:\smartpitch-ui\Screenshot 2025-10-29 231207.png"" alt="SmartPitch UI Preview" width="600"/>
+<img src="D:\smartpitch-ui\Screenshot 2025-10-29 231207.png" alt="SmartPitch UI Preview" width="600"/>
 
 🌱 Inspiration
 
