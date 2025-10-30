@@ -18,6 +18,7 @@ def home():
         tone = request.form.get("tone")
 
         message = generate_pitch(client_name, client_type, service, platform, tone)
+        return render_template("result.html", generated_message=message)
 
     return render_template("index.html", message=message)
 
